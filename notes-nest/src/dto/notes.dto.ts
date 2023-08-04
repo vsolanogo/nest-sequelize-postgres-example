@@ -1,10 +1,4 @@
-import {
-  IsString,
-  IsNotEmpty,
-  IsOptional,
-  IsIn,
-} from "class-validator";
-import { NotesCategory } from "../../models/NotesModels";
+import { IsString, IsNotEmpty, IsOptional } from "class-validator";
 
 export class EditNoteDto {
   @IsString()
@@ -15,7 +9,6 @@ export class EditNoteDto {
   @IsString()
   @IsNotEmpty()
   @IsOptional()
-  @IsIn(Object.keys(NotesCategory))
   category: string;
 
   @IsString()
@@ -26,7 +19,6 @@ export class EditNoteDto {
   isArchived: boolean;
 }
 
-
 export class CreateNoteDto {
   @IsString()
   @IsNotEmpty()
@@ -34,7 +26,6 @@ export class CreateNoteDto {
 
   @IsString()
   @IsNotEmpty()
-  @IsIn(Object.keys(NotesCategory))
   category: string;
 
   @IsString()
@@ -43,4 +34,10 @@ export class CreateNoteDto {
 
   @IsOptional()
   isArchived: boolean;
+}
+
+export class CreateCategoryDto {
+  @IsString()
+  @IsNotEmpty()
+  name: string;
 }
