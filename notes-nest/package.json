@@ -2,13 +2,14 @@
   "name": "notes-nest",
   "version": "0.0.1",
   "description": "",
-  "author": "",
+  "author": "vitaliy.zdrok@gmail.com",
   "private": true,
   "license": "UNLICENSED",
   "scripts": {
     "prebuild": "rimraf dist",
     "build": "nest build",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
+    "seed": "cross-env NODE_ENV=development SEED_ENV=true nest start",
     "start": "cross-env NODE_ENV=development nest start",
     "start:dev": "cross-env NODE_ENV=development nest start --watch",
     "start:debug": "cross-env NODE_ENV=development nest start --debug --watch",
@@ -21,6 +22,7 @@
     "test:e2e": "cross-env NODE_ENV=development jest --config ./test/jest-e2e.json --maxWorkers=1"
   },
   "dependencies": {
+    "@faker-js/faker": "^8.0.2",
     "@nestjs/common": "^9.0.0",
     "@nestjs/config": "^3.0.0",
     "@nestjs/core": "^9.0.0",
@@ -33,9 +35,12 @@
     "cross-env": "^7.0.3",
     "dotenv": "^16.3.1",
     "pg": "^8.11.2",
+    "pg-hstore": "^2.3.4",
     "reflect-metadata": "^0.1.13",
     "rimraf": "^3.0.2",
     "rxjs": "^7.2.0",
+    "sequelize": "^6.32.1",
+    "sequelize-typescript": "^2.1.5",
     "uuid": "^9.0.0"
   },
   "devDependencies": {

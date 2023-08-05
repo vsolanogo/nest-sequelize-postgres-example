@@ -6,12 +6,11 @@ export interface Note {
     content: string;
     dates: Array<string> | null;
     isArchived: boolean;
-  }
-  
-  export interface NoteCreatorParams {
+}
+export interface NoteCreatorParams {
     name: string;
     category: string;
     content: string;
     isArchived?: boolean;
     createdAt?: Date;
-  }
+}

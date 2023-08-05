@@ -1,9 +1,9 @@
 import { Module } from "@nestjs/common";
-import { AppController } from "./app.controller";
-import { AppService } from "./app.service";
-import { PostgresModule } from "./postgres/postgres.module";
-import { PostgresService } from "./postgres/postgres.service";
 import { ConfigModule } from "@nestjs/config";
+import { DbModule } from "./db/db.module";
+import { NoteModule } from "./note/note.module";
+import { CategoryModule } from "./category/category.module";
+import { DataSeedModule } from "./dataseed/dataseed.module";
 
 @Module({
   imports: [
@@ -11,9 +11,10 @@ import { ConfigModule } from "@nestjs/config";
       isGlobal: !!process.env.NODE_ENV,
       envFilePath: `.env.${process.env.NODE_ENV}`,
     }),
-    PostgresModule,
+    DbModule,
+    NoteModule,
+    CategoryModule,
+    DataSeedModule,
   ],
-  controllers: [AppController],
-  providers: [AppService, PostgresService],
 })
 export class AppModule {}
