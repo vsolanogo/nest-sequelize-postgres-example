@@ -104,7 +104,7 @@ describe("AppController (e2e)", () => {
   it("/notes/:id (GET)", async () => {
     const newNote = {
       name: "Test Note",
-      category: "Test Category",
+      category: "Idea",
       content: "This is a test note content.",
       isArchived: false,
     };
