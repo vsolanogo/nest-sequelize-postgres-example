@@ -1,1 +1,0 @@
-{"version":3,"file":"dataseed.module.js","sourceRoot":"","sources":["../../../src/dataseed/dataseed.module.ts"],"names":[],"mappings":";;;;;;;;;AAAA,2CAAwC;AACxC,yDAAqD;AACrD,2DAAuD;AACvD,uEAAmE;AAK5D,IAAM,cAAc,GAApB,MAAM,cAAc;CAAG,CAAA;AAAjB,cAAc;IAH1B,IAAA,eAAM,EAAC;QACN,SAAS,EAAE,CAAC,GAAG,sCAAiB,EAAE,GAAG,8BAAa,EAAE,kCAAe,CAAC;KACrE,CAAC;GACW,cAAc,CAAG;AAAjB,wCAAc"}
