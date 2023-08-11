@@ -23,6 +23,7 @@
   },
   "dependencies": {
     "@faker-js/faker": "^8.0.2",
+    "@jest/globals": "^29.6.2",
     "@nestjs/common": "^9.0.0",
     "@nestjs/config": "^3.0.0",
     "@nestjs/core": "^9.0.0",

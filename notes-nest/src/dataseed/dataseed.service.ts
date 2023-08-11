@@ -30,6 +30,7 @@ export class DataSeedService {
       const notesBatchPromises = [];
 
       for (let j = 0; j < 5; j++) {
+        console.log(categoriesList[i].id)
         const promise = this.noteRepository.create({
           name: faker.internet.displayName(),
           category: categoriesList[i].id,
